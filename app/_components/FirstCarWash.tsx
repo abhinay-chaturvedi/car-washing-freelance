@@ -3,7 +3,7 @@ import React from "react";
 
 const FirstCarWash = () => {
   return (
-    <div className="tw-w-full tw-relative tw-h-[400px]">
+    <div className="tw-w-full tw-relative tw-h-[500px]">
       <Image
         className="-tw-z-10"
         alt=""
