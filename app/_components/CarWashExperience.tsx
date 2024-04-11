@@ -8,7 +8,7 @@ const CarWashExperience = () => {
         className="-tw-z-10"
         alt=""
         src={"/images/car-wash-exp.png"}
-        // objectFit='contain'
+        objectFit='cover'
         layout="fill"
       />
       <div className="tw-max-w-7xl tw-p-2 tw-m-auto tw-h-full">

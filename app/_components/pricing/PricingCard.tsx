@@ -1,9 +1,9 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./index.css"
-const PricingCard = () => {
+const PricingCard = ({cl}: {cl: string}) => {
   return (
-    <div className="tw-flex-1 custom-pricing-css-hover">
+    <div className={"tw-shrink-0 tw-w-[31%] " + cl}>
         <div className="tw-bg-gray-400  tw-text-center tw-rounded-md tw-w-[80%] tw-m-auto tw-p-2 tw-translate-y-3 tw-text-white">
             <span className="tw-font-bold">Package</span>
         </div>
