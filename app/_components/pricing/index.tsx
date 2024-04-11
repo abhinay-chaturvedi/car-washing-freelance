@@ -64,7 +64,7 @@ const Pricing = () => {
               <button onClick={handleLeft}>
                 <FaArrowCircleLeft size={30} />
               </button>
-              <button onClick={handleRight}>
+              <button disabled={index==0} onClick={handleRight}>
                 <FaArrowCircleRight size={30} />
               </button>
             </div>
