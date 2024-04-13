@@ -1,12 +1,21 @@
-
 /* .custom-pricing-css-hover:hover{
     transform: scale3d(1.15, 1.25, 1.8);
     transition: .7s;
 } */
-.custom-scale{
+.custom-scale {
+  @media screen and (min-width: 768px) {
     transform: scale3d(1.15, 1.25, 1.8);
-    transition: .7s;
+    transition: 0.7s;
+  }
 }
-.perspective{
-    perspective: 1000px;
+.perspective {
+  perspective: 1000px;
+}
+* {
+  --scrollPercent: -31%;
+}
+@media screen and (max-width: 768px) {
+  * {
+    --scrollPercent: -100%;
+  }
 }

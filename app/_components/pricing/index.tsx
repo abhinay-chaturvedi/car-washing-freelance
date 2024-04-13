@@ -19,7 +19,7 @@ const Pricing = () => {
     setIndex((prev) => (prev + 1) % 5);
   };
   const handleRight = () => {
-    setIndex((prev) => (prev == 0 ? 0 : (prev - 1) % 5));
+    setIndex((prev) => (prev == 0 ? 4 : (prev - 1) % 5));
   };
   return (
     <div className="tw-w-full tw-relative">
@@ -34,7 +34,7 @@ const Pricing = () => {
         <div className="tw-max-w-5xl tw-m-auto tw-p-3">
           <div className="tw-flex tw-flex-col tw-items-center tw-my-3">
             <span className="tw-font-bold tw-text-[30px]">How it works</span>
-            <div className="tw-flex tw-gap-2 ">
+            <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-2 ">
               <HowWorkCard />
               <HowWorkCard />
               <HowWorkCard />
@@ -47,7 +47,7 @@ const Pricing = () => {
             <div className="tw-overflow-hidden tw-py-12 perspective">
               <div
                 style={{
-                  transform: `translateX(calc(${index}*(-31% - 36px)))`,
+                  transform: `translateX(calc(${index}*(var(--scrollPercent) - 36px)))`,
                 }}
                 ref={divRef}
                 className={`tw-flex tw-gap-9 tw-bg-blac tw-transition tw-duration-[.7s]`}
@@ -64,7 +64,7 @@ const Pricing = () => {
               <button onClick={handleLeft}>
                 <FaArrowCircleLeft size={30} />
               </button>
-              <button disabled={index==0} onClick={handleRight}>
+              <button onClick={handleRight}>
                 <FaArrowCircleRight size={30} />
               </button>
             </div>

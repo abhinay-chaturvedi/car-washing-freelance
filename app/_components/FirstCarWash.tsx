@@ -9,10 +9,11 @@ const FirstCarWash = () => {
         alt=""
         src={"/images/first-car-wash.png"}
         layout="fill"
+        objectFit="cover"
       />
       <div className="tw-max-w-7xl tw-p-2 tw-m-auto tw-h-full">
         <div className="tw-flex tw-justify-center tw-items-end tw-gap-5 tw-h-full tw-flex-col tw-text-white tw-w-full">
-          <div className="tw-flex tw-flex-col tw-max-w-[40%] tw-gap-3">
+          <div className="tw-flex tw-flex-col tw-max-w-[90%] md:tw-max-w-[40%] tw-gap-3">
             <span className="tw-font-bold tw-text-6xl">
               Get 50% Off your First Car Wash
             </span>
