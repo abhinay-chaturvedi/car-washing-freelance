@@ -3,7 +3,7 @@ import React from "react";
 
 const ClientSayCard = () => {
   return (
-    <div className="tw-w-[32%] tw-shrink-0 tw-bg-white tw-rounded-md tw-shadow-lg tw-p-4">
+    <div className="md:tw-basis-[30%] tw-basis-[80%] tw-shrink-0 tw-bg-white tw-rounded-md tw-shadow-lg tw-p-4">
       <div className="tw-flex tw-items-center tw-gap-3 tw-mb-2">
         <div className="tw-w-10 tw-h-10 tw-relative">
           <Image
