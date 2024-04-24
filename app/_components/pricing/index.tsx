@@ -5,6 +5,7 @@ import HowWorkCard from "./HowWorkCard";
 import PricingCard from "./PricingCard";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
+import data from "./data";
 
 const Pricing = () => {
   const divRef: { current: HTMLDivElement | null } = useRef(null);
@@ -44,7 +45,7 @@ const Pricing = () => {
             <span className="tw-font-bold tw-text-[30px] tw-text-center">
               Pricing
             </span>
-            <div className="tw-overflow-hidden tw-py-12 perspective">
+            <div className="tw-overflow-hidden tw-py-8 perspective">
               <div
                 style={{
                   transform: `translateX(calc(${index}*(var(--scrollPercent) - 36px)))`,
@@ -52,12 +53,36 @@ const Pricing = () => {
                 ref={divRef}
                 className={`tw-flex tw-gap-9 tw-bg-blac tw-transition tw-duration-[.7s]`}
               >
-                <PricingCard cl={""} />
-                <PricingCard cl={index == 0 ? "custom-scale" : ""} />
-                <PricingCard cl={index == 1 ? "custom-scale" : ""} />
-                <PricingCard cl={index == 2 ? "custom-scale" : ""} />
-                <PricingCard cl={index == 3 ? "custom-scale" : ""} />
-                <PricingCard cl={index == 4 ? "custom-scale" : ""} />
+                <PricingCard
+                  details={data.carWashing}
+                  plan="Basic Wash"
+                  cl={""}
+                />
+                <PricingCard
+                  details={data.standardClean}
+                  plan="Standard Clean"
+                  cl={index == 0 ? "custom-scale" : ""}
+                />
+                <PricingCard
+                  details={data.deluxShine}
+                  plan="Deluxe Shine"
+                  cl={index == 1 ? "custom-scale" : ""}
+                />
+                <PricingCard
+                  details={data.premiumDetail}
+                  plan="Premium Detail"
+                  cl={index == 2 ? "custom-scale" : ""}
+                />
+                <PricingCard
+                  details={data.uProtection}
+                  plan="Ultimate Protection"
+                  cl={index == 3 ? "custom-scale" : ""}
+                />
+                <PricingCard
+                  details={data.platinum}
+                  plan="Platinum Full Service"
+                  cl={index == 4 ? "custom-scale" : ""}
+                />
               </div>
             </div>
             <div className="tw-flex tw-gap-5 tw-justify-center tw-mt-5">
