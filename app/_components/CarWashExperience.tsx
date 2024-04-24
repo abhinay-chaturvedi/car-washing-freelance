@@ -3,7 +3,7 @@ import React from "react";
 
 const CarWashExperience = () => {
   return (
-    <div className="tw-w-full tw-relative tw-h-[600px] tw-bg-customeBackground">
+    <div className="tw-w-full tw-relative tw-min-h-[600px] tw-bg-customeBackground">
       <Image
         className="-tw-z-10"
         alt=""
@@ -17,10 +17,10 @@ const CarWashExperience = () => {
             Revolutionize your{" "}
             <span className="tw-text-pink-700">car wash</span> experience
           </span>
-          <div className="tw-flex tw-gap-11 tw-justify-center">
+          <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-11 tw-justify-center">
             <div className="tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative">
               <Image
-                className="tw-rounded-[30px] tw-p-3 tw-z-0"
+                className="tw-rounded-[30px] tw-p-2 tw-z-0"
                 alt=""
                 src={"/images/before-wash.jpg"}
                 objectFit="cover"

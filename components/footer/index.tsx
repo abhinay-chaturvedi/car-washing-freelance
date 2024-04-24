@@ -9,7 +9,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="tw-py-5">
-      <div className="tw-max-w-7xl tw-m-auto tw-p-3 tw-flex tw-justify-between">
+      <div className="tw-max-w-7xl tw-m-auto tw-p-3 tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between">
         <div className="tw-flex tw-gap-3 tw-h-max tw-my-auto">
           <FaFacebookSquare size={30} />
           <FaYoutube size={30} />
