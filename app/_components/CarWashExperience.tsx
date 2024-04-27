@@ -18,7 +18,7 @@ const CarWashExperience = () => {
             <span className="tw-text-pink-700">car wash</span> experience
           </span>
           <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-11 tw-justify-center">
-            <div className="tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative">
+            <div className="tw-cursor-pointer tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative hoverEffect">
               <Image
                 className="tw-rounded-[30px] tw-p-2 tw-z-0"
                 alt=""
@@ -30,7 +30,7 @@ const CarWashExperience = () => {
                 <span className="tw-text-white tw-font-bold">AFTER</span>
               </div>
             </div>
-            <div className="tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative">
+            <div className="tw-cursor-pointer tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative hoverEffect">
               <Image
                 className="tw-rounded-[30px] tw-p-3"
                 alt=""

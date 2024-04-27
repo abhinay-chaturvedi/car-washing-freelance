@@ -35,10 +35,10 @@ const Pricing = () => {
         <div className="tw-max-w-5xl tw-m-auto tw-p-3">
           <div className="tw-flex tw-flex-col tw-items-center tw-my-3">
             <span className="tw-font-bold tw-text-[30px]">How it works</span>
-            <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-2 ">
-              <HowWorkCard />
-              <HowWorkCard />
-              <HowWorkCard />
+            <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-2 tw-w-full ">
+              <HowWorkCard stepText="Select your plan" stepNo={1} color="#0D82B3"/>
+              <HowWorkCard stepText="Book your appointment" stepNo={2} color="#093F56" />
+              <HowWorkCard stepText="Contact us now!" stepNo={3} color="#0D82B3"/>
             </div>
           </div>
           <div className="tw-flex tw-flex-col tw-my-3">
@@ -57,31 +57,43 @@ const Pricing = () => {
                   details={data.carWashing}
                   plan="Basic Wash"
                   cl={""}
+                  color="#0D82B3"
+                  pColor="#093F56"
                 />
                 <PricingCard
                   details={data.standardClean}
                   plan="Standard Clean"
                   cl={index == 0 ? "custom-scale" : ""}
+                  color="#093F56"
+                  pColor="#0D82B3"
                 />
                 <PricingCard
                   details={data.deluxShine}
                   plan="Deluxe Shine"
                   cl={index == 1 ? "custom-scale" : ""}
+                  color="#0D82B3"
+                  pColor="#093F56"
                 />
                 <PricingCard
                   details={data.premiumDetail}
                   plan="Premium Detail"
                   cl={index == 2 ? "custom-scale" : ""}
+                  color="#093F56"
+                  pColor="#0D82B3"
                 />
                 <PricingCard
                   details={data.uProtection}
                   plan="Ultimate Protection"
                   cl={index == 3 ? "custom-scale" : ""}
+                  color="#0D82B3"
+                  pColor="#093F56"
                 />
                 <PricingCard
                   details={data.platinum}
                   plan="Platinum Full Service"
                   cl={index == 4 ? "custom-scale" : ""}
+                  color="#093F56"
+                  pColor="#0D82B3"
                 />
               </div>
             </div>

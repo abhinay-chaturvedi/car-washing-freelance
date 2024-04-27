@@ -1,15 +1,28 @@
 import React from "react";
-
-const HowWorkCard = () => {
+import { FaRegBuilding } from "react-icons/fa";
+import { FaTv } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
+const HowWorkCard = ({
+  color,
+  stepText,
+  stepNo,
+}: {
+  color: string;
+  stepText: string;
+  stepNo: number;
+}) => {
   return (
-    <div className="tw-flex tw-items-center tw-gap-2 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-bg-[#095D86] tw-text-white tw-rounded-md tw-p-4">
-      <span className="tw-font-bold tw-text-lg">select you service</span>
-      <span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A incidunt
-        error veniam repellendus aperiam, dolorem pariatur ipsum nesciunt fugiat
-        id facilis ex ullam omnis eaque ad atque distinctio. Blanditiis,
-        quaerat.
-      </span>
+    <div
+      style={{ background: `${color}` }}
+      className={
+        "tw-flex tw-items-center tw-gap-4 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-text-white tw-rounded-xl tw-p-4 "
+      }
+    >
+      {stepNo == 1 && <FaRegBuilding size={60} />}
+      {stepNo == 2 && <FaTv size={60} />}
+      {stepNo == 3 && <FaMobileAlt size={60} />}
+      <button className="tw-bg-white tw-p-2 tw-text-[gray] tw-font-bold tw-rounded-lg tw-px-4">STEP # {stepNo}</button>
+      <span className="tw-font-bold">{stepText}</span>
     </div>
   );
 };

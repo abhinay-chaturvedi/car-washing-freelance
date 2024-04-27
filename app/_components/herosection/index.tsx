@@ -1,14 +1,65 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from "embla-carousel-autoplay";
 import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import HeroSectionCard from "./HeroSectionCard";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 const HeroSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  // function isInViewport(element) {
+  //   const rect = element.getBoundingClientRect();
+  //   return (
+  //     rect.top >= 0 &&
+  //     rect.left >= 0 &&
+  //     rect.bottom <=
+  //       (window.innerHeight || document.documentElement.clientHeight) &&
+  //     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  //   );
+  // }
+  // useEffect(() => {
+  //   // function handleViewportAnimations() {
+  //   //   console.log("------------------")
+  //   //   const slides = document.querySelectorAll(".textSlide");
+  //   //   console.log("🚀 ~ useEffect ~ slides:", slides);
+  //   //   slides.forEach((slide) => {
+  //   //     if (isInViewport(slide)) {
+  //   //       slide.classList.add("fadeInUp");
+  //   //     } else {
+  //   //       slide.classList.remove("fadeInUp");
+  //   //     }
+  //   //   });
+  //   // }
+
+  //   var observer = new MutationObserver(function (mutationsList) {
+  //     // console.log("0000000000000000000")
+  //     for (var mutation of mutationsList) {
+  //       if (
+  //         mutation.attributeName === "style" &&
+  //         mutation.target.style.transform !== ""
+  //       ) {
+  //         // handleSlideChange();
+  //         console.log("0000000000000000000")
+  //         // const slides = document.querySelectorAll(".textSlide");
+  //         // console.log("🚀 ~ useEffect ~ slides:", slides);
+  //         // slides.forEach((slide) => {
+  //         //   if (isInViewport(slide)) {
+  //         //     console.log(true, slide)
+  //         //     slide.classList.add("fadeInUp");
+  //         //   } else {
+  //         //     slide.classList.remove("fadeInUp");
+  //         //   }
+  //         // });
+  //         break;
+  //       }
+  //     }
+  //   });
+  //   // const slideDiv = document.querySelector(".slideDiv");
+  //   // observer.observe(slideDiv, { attributes: true });
+  //   // document.querySelector(".slideDiv")?.addEventListener("transitionend", handleViewportAnimations);
+  // }, []);
   return (
     // <div className="tw-w-full tw-relative tw-h-[60 md:tw-h-[91vh]">
     //   <Image
@@ -41,10 +92,22 @@ const HeroSection = () => {
     //   </div>
     // </div>
     <div className="tw-overflow-hidden tw-relative" ref={emblaRef}>
-      <div className="tw-flex">
-        <HeroSectionCard imgUrl={"/images/hero-section.png"} />
-        <HeroSectionCard imgUrl={"/images/hero-section-2.png"}/>
-        <HeroSectionCard imgUrl={"/images/hero-section-3.png"}/>
+      <div className="tw-flex slideDiv">
+        <HeroSectionCard
+          title="Restore That Showroom Shine"
+          desc="Transform your vehicle with our expert car washing services, bringing back that pristine look and feel that you love."
+          imgUrl={"/images/hero-section.png"}
+        />
+        <HeroSectionCard
+          title="Attention to Detail"
+          desc="We don't just wash cars; we meticulously detail every nook and cranny, ensuring a thorough clean inside and out."
+          imgUrl={"/images/hero-section-2.png"}
+        />
+        <HeroSectionCard
+          title="Professional Touch"
+          desc="Our team consists of experienced professionals who understand the nuances of car care, providing top-notch service you can trust."
+          imgUrl={"/images/hero-section-3.png"}
+        />
       </div>
       <div className="tw-flex md:tw-flex-col tw-gap-4 tw-bottom-0 tw-left-[40%] md:tw-top-[30%] md:tw-left-[70%] tw-absolute">
         <button onClick={() => emblaApi?.scrollNext()}>

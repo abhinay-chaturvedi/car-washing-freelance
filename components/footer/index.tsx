@@ -8,7 +8,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="tw-py-5">
+    <div className="tw-py-5 tw-bg-[#093F56] tw-text-white">
       <div className="tw-max-w-7xl tw-m-auto tw-p-3 tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between">
         <div className="tw-flex tw-gap-3 tw-h-max tw-my-auto">
           <FaFacebookSquare size={30} />
@@ -51,7 +51,7 @@ const Footer = () => {
                 type="text"
                 placeholder="Enter your email"
               />
-              <button className="tw-bg-sky-200 tw-p-2 tw-rounded-r-2xl">
+              <button className="tw-bg-sky-[#0D82B3] tw-p-2 tw-rounded-r-2xl">
                 Subscribe
               </button>
             </div>

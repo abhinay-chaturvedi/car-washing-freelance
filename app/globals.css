@@ -2,10 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   box-sizing: border-box;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translate3d(0, 60px, 0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.fadeInUp {
+  opacity: 0;
+  /* animation-name: fadeInUp; */
+  animation: fadeInUp 4s infinite;
+  -webkit-animation-name: fadeInUp;
+}
+@keyframes moveExp {
+  0% {
+    transform: translate3d(80px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.carWashExpAnime {
+  opacity: 0;
+  animation-name: moveExp;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+.hoverEffect:hover{
+  scale: 1.1;
+  /* background-color: black; */
+  transition: 1s;
+  box-shadow: 1px 1px 5px 15px rgb(196, 171, 221);
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;
