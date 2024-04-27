@@ -8,7 +8,7 @@ import HeroSectionCard from "./HeroSectionCard";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 const HeroSection = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({stopOnInteraction: false})]);
   // function isInViewport(element) {
   //   const rect = element.getBoundingClientRect();
   //   return (
@@ -109,14 +109,14 @@ const HeroSection = () => {
           imgUrl={"/images/hero-section-3.png"}
         />
       </div>
-      <div className="tw-flex md:tw-flex-col tw-gap-4 tw-bottom-0 tw-left-[40%] md:tw-top-[30%] md:tw-left-[70%] tw-absolute">
+      {/* <div className="tw-flex md:tw-flex-col tw-gap-4 tw-bottom-0 tw-left-[40%] md:tw-top-[30%] md:tw-left-[70%] tw-absolute">
         <button onClick={() => emblaApi?.scrollNext()}>
           <FaArrowCircleLeft color="white" size={40} />
         </button>
         <button onClick={() => emblaApi?.scrollPrev()}>
           <FaArrowCircleRight color="white" size={40} />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

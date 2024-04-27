@@ -15,10 +15,10 @@ const NavBar = () => {
           />
         </div>
         <div className="tw-bg-blue-500 tw-h-full tw-flex tw-gap-6 tw-text-white tw-items-center tw-p-4">
-          <button>Home</button>
-          <button>About Us</button>
-          <button>Product</button>
-          <button>Contact Us</button>
+          <button className="hover:tw-text-black">Home</button>
+          <button className="hover:tw-text-black">About Us</button>
+          <button className="hover:tw-text-black">Product</button>
+          <button className="hover:tw-text-black">Contact Us</button>
         </div>
       </div>
     </nav>

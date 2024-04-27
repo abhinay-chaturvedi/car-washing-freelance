@@ -13,7 +13,7 @@ const CarWashExperience = () => {
       />
       <div className="tw-max-w-7xl tw-p-2 tw-m-auto tw-h-full">
         <div className="tw-flex tw-gap-6 tw-h-full tw-flex-col tw-mt-4">
-          <span className="tw-font-bold tw-text-3xl tw-text-center">
+          <span className="tw-font-bold tw-text-3xl tw-text-center tw-m-4">
             Revolutionize your{" "}
             <span className="tw-text-pink-700">car wash</span> experience
           </span>

@@ -2,10 +2,11 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import ClientSayCard from "./ClientSayCard";
+import Autoplay from "embla-carousel-autoplay";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 const ClientSays = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({delay: 1500, stopOnInteraction: false})]);
   return (
     <div className="tw-bg-customeBackground tw-py-3">
       <div className="tw-overflow-hidden tw-max-w-7xl tw-m-auto tw-p-3 tw-relative">
@@ -24,14 +25,14 @@ const ClientSays = () => {
                 <ClientSayCard/> */}
           </div>
         </div>
-        <div className="tw-flex  tw-gap-4 tw-bottom-0 tw-left-[45%] tw-absolute">
+        {/* <div className="tw-flex  tw-gap-4 tw-bottom-0 tw-left-[45%] tw-absolute">
           <button onClick={() => console.log(emblaApi?.scrollNext())}>
             <FaArrowCircleLeft size={40} />
           </button>
           <button onClick={() => emblaApi?.scrollPrev()}>
             <FaArrowCircleRight size={40} />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
