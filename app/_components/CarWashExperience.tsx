@@ -13,9 +13,9 @@ const CarWashExperience = () => {
       />
       <div className="tw-max-w-7xl tw-p-2 tw-m-auto tw-h-full">
         <div className="tw-flex tw-gap-6 tw-h-full tw-flex-col tw-mt-4">
-          <span className="tw-font-bold tw-text-3xl tw-text-center tw-m-4">
-            Revolutionize your{" "}
-            <span className="tw-text-pink-700">car wash</span> experience
+          <span className="tw-font-bold tw-text-4xl tw-text-center tw-m-4">
+            Revolutionize your car{" "}
+            <span className="tw-text-[#0D82B3]">wash experience</span> 
           </span>
           <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-11 tw-justify-center">
             <div className="tw-cursor-pointer tw-flex-1 tw-bg-white tw-aspect-square tw-max-w-96 tw-rounded-3xl tw-relative hoverEffect">
