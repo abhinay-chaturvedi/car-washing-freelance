@@ -38,10 +38,10 @@ const PricingCard = ({
         }
       >
         <span className="tw-font-bold tw-text-lg">{plan}</span>
-        <div>
+        {/* <div>
           <span className="tw-font-bold tw-text-3xl">$25.00</span>
           <span>/Per Wash</span>
-        </div>
+        </div> */}
         <div className="tw-flex tw-flex-col tw-gap-1">
           {details?.map((item, index) => {
             return (
