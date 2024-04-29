@@ -76,7 +76,7 @@ const Pricing = () => {
                 />
                 <PricingCard
                   details={data.premiumDetail}
-                  plan="Premium Detail"
+                  plan="Premium"
                   cl={index == 2 ? "custom-scale" : ""}
                   color="#093F56"
                   pColor="#0D82B3"

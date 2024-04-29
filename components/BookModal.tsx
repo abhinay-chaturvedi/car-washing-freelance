@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import { FaWindowClose } from "react-icons/fa";
 
-const BookModal = () => {
+const BookModal = ({ pricePlan }: { pricePlan: string | null }) => {
+  console.log("🚀 ~ BookModal ~ pricePlan:", pricePlan=="Basic Wash")
   const [open, setOpen] = useState(false);
   const [booking, setBooking] = useState({
-    plan: "",
+    plan: pricePlan? pricePlan: "",
     name: "",
     phone: "",
     pincode: "",
@@ -17,23 +18,23 @@ const BookModal = () => {
   const handleBookNow = async () => {
     try {
       if (!booking.plan) {
-        setError("Please Select Plan")
+        setError("Please Select Plan");
         return;
       }
       if (!booking.name) {
-        setError("Please Enter Name")
+        setError("Please Enter Name");
         return;
       }
       if (!booking.phone) {
-        setError("Please Enter Phone")
+        setError("Please Enter Phone");
         return;
       }
       if (!booking.pincode) {
-        setError("Please Enter Pincode")
+        setError("Please Enter Pincode");
         return;
       }
       if (!booking.address) {
-        setError("Please Enter Address")
+        setError("Please Enter Address");
         return;
       }
       console.log(booking);
@@ -42,13 +43,19 @@ const BookModal = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json",
         },
-        body: JSON.stringify(booking)
-      })
+        body: JSON.stringify(booking),
+      });
       const result = await res.json();
-      console.log("🚀 ~ handleBookNow ~ result:", result)
+      console.log("🚀 ~ handleBookNow ~ result:", result);
       setIsSending(false);
+      if (result.status == 200) {
+        //TODO:
+        // will make something for confirmation to customers
+      } else {
+        setError(result.message);
+      }
     } catch (err) {
       console.error(err);
       setIsSending(false);
@@ -65,6 +72,7 @@ const BookModal = () => {
           Open Modal
         </button> */}
         <button
+          style={{width: pricePlan? "100%": ""}}
           onClick={() => setOpen(true)}
           className="tw-w-max tw-bg-white tw-text-blue-500 tw-rounded-xl tw-p-2 tw-font-bold tw-px-8"
         >
@@ -87,7 +95,7 @@ const BookModal = () => {
               {error && (
                 <div className="tw-bg-red-400 tw-p-2 tw-text-white tw-rounded-lg tw-flex tw-justify-between tw-items-center">
                   <span>{error}</span>
-                  <button>
+                  <button onClick={() => setError(null)}>
                     <FaWindowClose size={20} />
                   </button>
                 </div>
@@ -103,7 +111,7 @@ const BookModal = () => {
                       [e.target.name]: e.target.value,
                     }))
                   }
-                  defaultValue={""}
+                  defaultValue={pricePlan? pricePlan: ""}
                   className="tw-border-[1px] tw-border-[gray] tw-rounded-lg tw-p-2 tw-cursor-pointer"
                   name="plan"
                   id=""
@@ -111,9 +119,16 @@ const BookModal = () => {
                   <option value="" disabled selected hidden>
                     Please Select Your Plan...
                   </option>
-                  <option value="first">first</option>
-                  <option value="first">second</option>
-                  <option value="first">third</option>
+                  <option value="Basic Wash" >Basic Wash</option>
+                  <option value="Standard Clean" >Standard Clean</option>
+                  <option value="Deluxe Shine" >Deluxe Shine</option>
+                  <option value="Premium" >Premium</option>
+                  <option value="Ultimate Protection" >
+                    Ultimate Protection
+                  </option>
+                  <option value="Platinum Full Service" selected={pricePlan=="Platinum Full Service"}>
+                    Platinum Full Service
+                  </option>
                 </select>
               </div>
               <div className="tw-flex tw-flex-col tw-gap-1">

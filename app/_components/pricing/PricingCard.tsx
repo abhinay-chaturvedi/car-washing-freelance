@@ -1,6 +1,9 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./index.css";
+import BookModal from "@/components/BookModal";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // - Exterior hand wash
 // - Wheel clean
@@ -23,6 +26,7 @@ const PricingCard = ({
   pColor: string;
 }) => {
   // console.log(color)
+  const router = useRouter();
   return (
     <div className={"tw-shrink-0 tw-w-[100%] md:tw-w-[31%] " + cl}>
       <div
@@ -55,9 +59,12 @@ const PricingCard = ({
             );
           })}
         </div>
-        <button className="tw-mt-[auto] tw-py-2 tw-rounded-xl tw-bg-white tw-text-black tw-font-bold">
+
+        <button onClick={() => router.push(`/plans/${plan.split(" ").join("-")}`)} className="tw-mt-[auto] tw-py-2 tw-rounded-xl tw-bg-white tw-text-black tw-font-bold">
           Purchase
         </button>
+        
+        {/* <BookModal pricePlan={plan} /> */}
       </div>
     </div>
   );

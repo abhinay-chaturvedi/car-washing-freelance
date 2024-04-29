@@ -15,7 +15,7 @@ const Modal = ({
         <div
           onClick={() => onClose()}
           className={
-            "tw-h-[100vh] tw-z-[1000] tw-w-[100vw] tw-bg-black tw-bg-opacity-50 tw-fixed tw-top-0 tw-left-0 "
+            "tw-h-[100vh] tw-z-[1000] tw-w-[100vw] tw-bg-black tw-bg-opacity-50 tw-fixed tw-transform-none tw-top-0 tw-left-0 "
           }
         >
           <div onClick={(e) => e.stopPropagation()}>{children}</div>

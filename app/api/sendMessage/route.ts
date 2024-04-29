@@ -4,7 +4,7 @@ const body = {
   to: "918756467641",
   type: "template",
   template: {
-    name: "Hi Abhinay",
+    name: "hello_world",
     language: {
       code: "en_US",
     },
