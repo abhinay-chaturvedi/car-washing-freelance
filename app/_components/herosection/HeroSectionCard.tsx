@@ -25,7 +25,7 @@ const HeroSectionCard = ({ imgUrl,title, desc }: { imgUrl: string, title: string
           <button className="tw-w-max tw-bg-white tw-text-blue-500 tw-rounded-xl tw-p-2 tw-font-bold tw-px-8">
             Book Now
           </button>
-          {/* <BookModal/> */}
+          <BookModal pricePlan={null}/>
           <div className="tw-flex tw-gap-3">
             <FaFacebookSquare size={30} />
             <FaYoutube size={30} />

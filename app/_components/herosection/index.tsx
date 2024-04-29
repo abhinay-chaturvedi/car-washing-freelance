@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
@@ -8,7 +8,14 @@ import HeroSectionCard from "./HeroSectionCard";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 const HeroSection = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({stopOnInteraction: false})]);
+  // const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({stopOnInteraction: false})]);
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlide((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval)
+  }, []);
   // function isInViewport(element) {
   //   const rect = element.getBoundingClientRect();
   //   return (
@@ -91,24 +98,30 @@ const HeroSection = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="tw-overflow-hidden tw-relative" ref={emblaRef}>
-      <div className="tw-flex slideDiv">
+    // <div className="tw-overflow-hidden tw-relative" ref={emblaRef}>
+    <div className="tw-flex slideDiv">
+      {slide == 0 && (
         <HeroSectionCard
           title="Restore That Showroom Shine"
           desc="Transform your vehicle with our expert car washing services, bringing back that pristine look and feel that you love."
           imgUrl={"/images/hero-section.png"}
         />
+      )}
+      {slide == 1 && (
         <HeroSectionCard
           title="Attention to Detail"
           desc="We don't just wash cars; we meticulously detail every nook and cranny, ensuring a thorough clean inside and out."
           imgUrl={"/images/hero-section-2.png"}
         />
+      )}
+      {slide == 2 && (
         <HeroSectionCard
           title="Professional Touch"
           desc="Our team consists of experienced professionals who understand the nuances of car care, providing top-notch service you can trust."
           imgUrl={"/images/hero-section-3.png"}
         />
-      </div>
+      )}
+      {/* </div> */}
       {/* <div className="tw-flex md:tw-flex-col tw-gap-4 tw-bottom-0 tw-left-[40%] md:tw-top-[30%] md:tw-left-[70%] tw-absolute">
         <button onClick={() => emblaApi?.scrollNext()}>
           <FaArrowCircleLeft color="white" size={40} />
