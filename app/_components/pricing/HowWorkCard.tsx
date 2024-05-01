@@ -2,6 +2,11 @@ import React from "react";
 import { FaRegBuilding } from "react-icons/fa";
 import { FaTv } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
+const classObject = {
+  1: "how-works-left",
+  2: "how-works-bottom",
+  3: "how-works-right"
+}
 const HowWorkCard = ({
   color,
   stepText,
@@ -15,7 +20,7 @@ const HowWorkCard = ({
     <div
       style={{ background: `${color}` }}
       className={
-        "tw-flex tw-items-center tw-gap-4 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-text-white tw-rounded-xl tw-p-4 "
+        "tw-flex tw-items-center tw-gap-6 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-text-white tw-rounded-xl tw-p-5 " + (classObject[stepNo as keyof typeof classObject])
       }
     >
       {stepNo == 1 && <FaRegBuilding size={60} />}

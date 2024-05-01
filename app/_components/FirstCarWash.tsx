@@ -4,7 +4,7 @@ import React from "react";
 
 const FirstCarWash = () => {
   return (
-    <div className="tw-w-full tw-relative tw-h-[500px]">
+    <div className="tw-w-full tw-relative tw-h-[500px] first-car-wash-anime">
       <Image
         className="-tw-z-10"
         alt=""

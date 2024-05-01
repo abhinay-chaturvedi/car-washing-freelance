@@ -49,11 +49,13 @@
   animation-timing-function: ease-in;
 }
 .hoverEffect:hover{
-  scale: 1.1;
-  /* background-color: black; */
+  scale: 1.05;
+  
   transition: 1s;
-  box-shadow: 1px 1px 5px 15px rgb(196, 171, 221);
+  /* box-shadow: 1px 1px 5px 15px rgb(196, 171, 221); */
 }
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -83,3 +85,76 @@
     text-wrap: balance;
   }
 } */
+
+.hover-effect {
+  --first-color: #5ddcff; 
+  --second-color: #3c67e3;
+  --third-color: #4e00c2;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.hover-effect::before,
+.hover-effect::after {
+  opacity: 0;
+  content: "";
+  transition: all 0.5s ease-in-out;
+}
+.hover-effect:hover::before,
+.hover-effect:hover::after {
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(
+      var(--rotate),
+      var(--first-color),
+      var(--second-color) 43%,
+      var(--third-color)
+  );
+  animation: spin 2.5s linear infinite;
+  opacity: 1;
+}
+.hover-effect:hover::before {
+  width: 104%;
+  height: 104%;
+  border-radius: 8px;
+  top: -2%;
+  left: -2%;
+}
+.hover-effect:hover::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9);
+  filter: blur(500px);
+}
+@keyframes spin {
+  0% {
+      --rotate: 0deg;
+  }
+  100% {
+      --rotate: 360deg;
+  }
+}
+
+
+/* first car wash animation starts here */
+.first-car-wash-anime {
+  animation-name: FirstCarWashAnime;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  scale: 0;
+}
+@keyframes FirstCarWashAnime {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}

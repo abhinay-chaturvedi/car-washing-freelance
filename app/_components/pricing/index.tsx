@@ -35,7 +35,7 @@ const Pricing = () => {
         <div className="tw-max-w-5xl tw-m-auto tw-p-3">
           <div className="tw-flex tw-flex-col tw-items-center tw-my-3">
             <span className="tw-font-bold tw-text-[30px]">How it works</span>
-            <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-2 tw-w-full ">
+            <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-5 tw-w-full ">
               <HowWorkCard stepText="Select your plan" stepNo={1} color="#0D82B3"/>
               <HowWorkCard stepText="Book your appointment" stepNo={2} color="#093F56" />
               <HowWorkCard stepText="Contact us now!" stepNo={3} color="#0D82B3"/>

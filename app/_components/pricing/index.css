@@ -19,3 +19,58 @@
     --scrollPercent: -100%;
   }
 }
+
+.how-works-left {
+  animation-name: comeFromLeft;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.how-works-right {
+  animation-name: comeFromRight;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.how-works-bottom {
+  animation-name: comeFromBottom;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes comeFromLeft {
+  0% {
+    transform: translate(-200px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes comeFromRight {
+  0% {
+    transform: translate(200px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes comeFromBottom {
+  0% {
+    transform: translate(0, 300px) rotate(-40deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
