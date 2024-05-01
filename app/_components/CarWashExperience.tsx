@@ -18,25 +18,29 @@ const CarWashExperience = () => {
             <span className="tw-text-[#0D82B3]">wash experience</span>
           </span>
           <div className="tw-flex tw-flex-col md:tw-flex-row tw-gap-14 tw-justify-center">
-            <div className="tw-cursor-pointer tw-flex-1 tw-min-h-[400px] tw-max-w-[500px]  tw-relative hoverEffect hover-effect">
+            <div className="tw-cursor-pointer tw-flex-1 tw-max-w-[500px]  tw-relative hoverEffect hover-effect">
               <Image
                 className="tw-rounded-[30px] tw-p-3 tw-z-0"
                 alt=""
-                src={"/images/before-wash.jpg"}
+                src={"/images/before.png"}
                 objectFit="cover"
-                layout="fill"
+                // layout="fill"
+                height={450}
+                width={500}
               />
               {/* <div className="tw-bg-zinc-600 tw-p-2 tw-text-center tw-z-10 tw-bottom-0 tw-rounded-b-3xl tw-absolute tw-w-full">
                 <span className="tw-text-white tw-font-bold">AFTER</span>
               </div> */}
             </div>
-            <div className="tw-cursor-pointer tw-flex-1 tw-max-w-[500px] tw-relative hoverEffect hover-effect">
+            <div className="tw-cursor-pointer tw-flex-1 tw-max-w-[500px] hoverEffect hover-effect">
               <Image
                 className="tw-rounded-[30px] tw-p-3"
                 alt=""
-                src={"/images/before-wash.jpg"}
+                src={"/images/after.png"}
                 objectFit="cover"
-                layout="fill"
+                // layout="fill"
+                height={450}
+                width={500}
               />
               {/* <div className="tw-bg-zinc-600 tw-p-2 tw-text-center tw-z-10 tw-bottom-0 tw-rounded-b-3xl tw-absolute tw-w-full">
                 <span className="tw-text-white tw-font-bold">BEFORE</span>

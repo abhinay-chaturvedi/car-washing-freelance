@@ -11,16 +11,19 @@ const HowWorkCard = ({
   color,
   stepText,
   stepNo,
+  id
 }: {
   color: string;
   stepText: string;
   stepNo: number;
+  id: string
 }) => {
   return (
     <div
+      id={id}
       style={{ background: `${color}` }}
       className={
-        "tw-flex tw-items-center tw-gap-6 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-text-white tw-rounded-xl tw-p-5 " + (classObject[stepNo as keyof typeof classObject])
+        "tw-flex tw-items-center tw-gap-6 tw-min-h-48 tw-justify-center tw-flex-col tw-flex-1 tw-text-white tw-rounded-xl tw-p-5 "
       }
     >
       {stepNo == 1 && <FaRegBuilding size={60} />}
