@@ -29,6 +29,7 @@ const Pricing = () => {
       // console.log("scroll")
       var vwTop = window.pageYOffset;
         var vwBottom = (window.pageYOffset + window.innerHeight);
+        if(!howWorkCardDiv) return ;
         var elemTop = howWorkCardDiv.getBoundingClientRect().top;
         var elemHeight = howWorkCardDiv.offsetHeight;
         console.log(vwTop, vwBottom);
